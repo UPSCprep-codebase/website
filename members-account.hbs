@@ -1,0 +1,106 @@
+{{!< default}}
+
+{{^if @member}}
+<script>
+window.location = '/signin/'
+</script>
+{{/if}}
+
+<main class="main-content">
+
+  <div class="post-header tc">
+
+    <div class="container">
+      <h1 class="lhtitle font-heading mb1 mt0 fs36">{{t "Your account"}}</h1>
+
+      <hr class="line line--center">
+
+    </div>
+
+  </div>
+
+  <div class="container container--narrow centered mt4 mb3">
+
+    {{#if @member.paid}}
+
+    {{!-- Logged in, paying --}}
+    <div class="user">
+      {{#if @member.avatar_image}}
+      <div class="user__avatar">
+        <img src="{{@member.avatar_image}}" class="avatar" alt="Avatar">
+      </div>
+      {{/if}}
+
+      <p>{{#if @member.name}}{{@member.name}}<br>{{/if}}<strong>{{@member.email}}</strong></p>
+      <p>{{{t "You are a <b>paying member</b> of {site_name}." site_name=@site.title}}}</p>
+    </div>
+
+    <div class="mt3">
+      <h2>{{t "Your subscription"}}</h2>
+
+      {{#foreach @member.subscriptions}}
+         
+        <div class="mb2">
+
+          {{#if cancel_at_period_end}}
+            <p>
+              <label>{{t "Status"}}</label>
+              <span>{{status}}</span>
+            </p>
+          {{else}}
+            <p><span class="tag"><span class="active-check">{{>"icons/check" size="12"}}</span> <span style="text-transform: capitalize;">{{status}}</span></p>
+          {{/if}}
+
+          <p>
+            <label>{{t "Your plan"}}</label>
+            <span>{{plan.nickname}} &middot; {{price plan}}/{{plan.interval}}</span>
+          </p>
+          <p>
+            <label>{{t "Card"}}</label>
+            <span>{{#match default_payment_card_last4 "****"}}{{t "No card on file"}}{{else}}**** **** **** {{default_payment_card_last4}}{{/match}}</span>
+          </p>
+          <p>
+            <label class="subscriber-detail-label">
+              {{#if cancel_at_period_end}}
+                {{t "Expires"}}
+              {{else}}
+                {{t "Next bill date"}}
+              {{/if}}
+            </label>
+            <span class="subscriber-detail-content">{{date current_period_end format="DD MMM YYYY"}}</span>
+          </p>
+
+          <p>
+            <a href="" data-members-edit-billing data-members-success="/account/" data-members-cancel="/account/">
+              {{t "Edit billing info"}}
+            </a>
+
+            &middot;
+
+            {{cancel_link}}
+          </p>
+        </div>
+      {{/foreach}}
+    </div>
+
+  {{else if @member}}
+
+    {{!-- Logged in, not paying: Link to subscribe page --}}
+    <div class="user">
+      {{#if @member.avatar_image}}
+      <div class="user__avatar">
+        <img src="{{@member.avatar_image}}" class="avatar" alt="Avatar">
+      </div>
+      {{/if}}
+
+      <p>Hi {{#if @member.name}}{{@member.name}}<br>{{/if}}<strong>{{@member.email}}</strong></p>
+      <p>{{{t "Welcome to the <strong>UPSCprep</strong> community."}}}</p>
+      <p>{{{t "Check out our Courses from ≡ / Top bar"}}}</p>
+    </div>
+
+  {{/if}}
+
+    <p class="mt2 color--grey"><a href="" data-members-signout>{{t "Sign out"}}</a></p>
+  </div>
+
+</main>

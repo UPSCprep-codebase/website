@@ -1,0 +1,32 @@
+{{!< default}}
+
+{{#if @member}}
+<script>
+window.location = '/'
+</script>
+{{/if}}
+
+<main class="main-content">
+
+  <div class="container mt4 tc">
+    <h1 class="lhtitle font-heading mt0 fs36">{{t "Sign in"}}</h1>
+  </div>
+
+  <div class="container container--narrow centered tc mt3 mb4">
+
+    <p>{{t "Welcome back!"}}</p>
+
+    <form data-members-form="signin" class="form-stacked centered mt2" style="max-width: 480px">
+      <div class="form-body">
+        <input data-members-email type="email" required="true" placeholder="Email address" class="tc">
+        <button type="submit"><span class="button-content">{{t "Sign in"}}</span><span class="button-loader">{{t "Submitting..."}}</span></button>
+        <p data-members-error style="color: red" class="mt0"></p>
+      </div>
+      <div class="success-message">
+        <p class="mt0 mb0">{{t "Please check your inbox for a log in link."}}</p>
+      </div>
+    </form>
+
+  </div>
+
+</main>

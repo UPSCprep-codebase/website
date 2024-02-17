@@ -1,0 +1,19 @@
+<div class="topic">
+  <h2 class="normal">📝 <a href="/mains-daw/" style="text-decoration: none">GS Mains Daily Answer Writing</a></h2>
+  {{#get "posts" filter="primary_tag:mains-daw" limit="7"}}
+    {{#foreach posts}}
+      <a href="{{url}}" title="{{title}}" class="article-link color-text nolink">{{title}}</a>
+    {{/foreach}}
+  {{/get}}
+  <a href="/mains-daw/" class="article-more-link fs14 ttu b color-text nolink">More questions for Mains answer writing &rarr;</a>
+</div>
+
+<div class="topic">
+  <h2 class="normal">🏙️ <a href="/sociology-daw/" style="text-decoration: none">Sociology Daily Answer Writing</a></h2>
+  {{#get "posts" filter="primary_tag:sociology-daw" limit="7"}}
+    {{#foreach posts}}
+      <a href="{{url}}" title="{{title}}" class="article-link color-text nolink">{{title}}</a>
+    {{/foreach}}
+  {{/get}}
+  <a href="/sociology-daw/" class="article-more-link fs14 ttu b color-text nolink">More questions for Sociology answer writing &rarr;</a>
+</div>

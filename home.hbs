@@ -1,0 +1,219 @@
+{{!< default}} <div class="home-slant">
+  </div>
+
+  <div class="container">
+
+    <div class="home__hero mt3 mb2">
+
+      {{#page}}
+      <div class="home__intro mt2">
+        <div class="fs20">
+          {{content}}
+        </div>
+
+        {{#if @custom.show_subscribe_form}}
+        <div class="mt2 mb3">
+          {{> subscribe-form-inline}}
+        </div>
+        {{/if}}
+
+      </div>
+
+      <div class="home__video">
+        {{#if @custom.youtube_id}}
+        <lite-youtube videoid="{{@custom.youtube_id}}"></lite-youtube>
+        {{else}}
+        {{#if feature_image}}
+        <img src="{{img_url feature_image size=" m"}}" alt="{{title}}" />
+        {{/if}}
+        {{/if}}
+      </div>
+      {{/page}}
+
+    </div>
+    <div class="home__explore mt4">
+
+        <h2 class="fs32 mb1">{{t "Testimonials"}}</h2>
+
+        <hr class="line mb2">
+        <div class="home_explore">
+
+          {{> testimonial}}
+        </div>
+        <div class="kg-card kg-button-card kg-align-center"><a href="https://www.upscprep.com/testimonials/"
+          class="kg-btn kg-btn-accent" target="_blank">More Testimonials</a></div>
+    </div>
+<div style="font-weight: 600;" class="home__checkout  fs24">
+      {{@custom.callout}}
+      <div class="home__arrow">
+        <svg width="57" height="61" viewBox="0 0 57 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path
+              d="M27.24 59.656c3.056-4.048 6.993-7.064 11.733-8.884 1.044-.403.601-2.019-.494-1.686a27.466 27.466 0 00-7.22 3.363c4.386-6.307 6.793-13.976 7.43-21.601.826-9.907-1.403-22-8.078-29.72-.977-1.136-3.166.194-2.558 1.583C30 7.16 32.27 11.285 33.525 16.038c1.242 4.705 1.793 9.525 1.53 14.385-.434 8.056-3.296 15.458-7.17 22.389-.355-2.259-1.235-4.428-2.668-6.287-1.3-1.681-4.121-.045-2.869 1.776 2.13 3.113 3.128 6.322 2.577 10.122-.167 1.186 1.416 2.426 2.317 1.233z"
+              fill="#333" fill-opacity=".85" />
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <path transform="rotate(148.25 56.2 41.845)" fill="#fff" d="M56.2 41.845h35.638v49.209H56.2z" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div>
+    </div>
+    <div>
+      <div>
+
+        {{> courses}}
+      </div>
+      <div class="kg-card kg-button-card kg-align-center"><a href="https://courses.upscprep.com/?ref=upscprep-com"
+          class="kg-btn kg-btn-accent" target="_blank">ALL Courses</a></div>
+    </div>
+    <div style="font-weight: 600;" class="home__checkout  fs24">
+      Free Resources for UPSC
+      <div class="home__arrow">
+        <svg width="57" height="61" viewBox="0 0 57 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path
+              d="M27.24 59.656c3.056-4.048 6.993-7.064 11.733-8.884 1.044-.403.601-2.019-.494-1.686a27.466 27.466 0 00-7.22 3.363c4.386-6.307 6.793-13.976 7.43-21.601.826-9.907-1.403-22-8.078-29.72-.977-1.136-3.166.194-2.558 1.583C30 7.16 32.27 11.285 33.525 16.038c1.242 4.705 1.793 9.525 1.53 14.385-.434 8.056-3.296 15.458-7.17 22.389-.355-2.259-1.235-4.428-2.668-6.287-1.3-1.681-4.121-.045-2.869 1.776 2.13 3.113 3.128 6.322 2.577 10.122-.167 1.186 1.416 2.426 2.317 1.233z"
+              fill="#333" fill-opacity=".85"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <path transform="rotate(148.25 56.2 41.845)" fill="#fff" d="M56.2 41.845h35.638v49.209H56.2z"></path>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div class="home__topics">
+
+      <a class="home__topic-block tc color-text nolink mt2" href="/upsc-mains-daily-answer-writing/">
+        <div class="fs45 mb1">📝</div>
+        <h2 class="mb1">Daily Answer Writing</h2>
+        <p>We post 2 questions with model solutions every Mon to Fri. Practice makes perfect.</p>
+      </a>
+
+      <a class="home__topic-block tc color-text nolink mt2" href="/csat/">
+        <div class="fs45 mb1">🔠</div>
+        <h2 class="mb1">CSAT Free Resources</h2>
+        <p>CSAT theory, practice questions, tips and tricks.</p>
+      </a>
+
+      <a class="home__topic-block tc color-text nolink mt2" href="/sociology-notes/">
+        <div class="fs45 mb1">📚</div>
+        <h2 class="mb1">Sociology Optional Notes</h2>
+        <p>Detailed notes for Sociology optional paper 1 & paper 2.</p>
+      </a>
+
+    </div>
+
+    
+
+    <div class="home__sections">
+      <div class="home__latest mt4">
+
+        <h2 class="fs32 mb1">{{t "Latest Articles"}}</h2>
+
+        <hr class="line mb1">
+
+        {{#get "posts" limit="6" include="tags,tiers"}}
+        <div class="home_latest">
+          {{#foreach posts}}
+
+          {{!-- <div class="article-link">
+            <div>
+              <div class="fs14 color-grey b ttu">
+                {{#if primary_tag}}
+                {{#primary_tag}}
+                <a href="{{url}}" title="{{name}}" class="nolink">{{name}}</a>
+                {{/primary_tag}}
+                &ensp;
+                {{/if}}
+                {{> access-label icon_size=16}}
+              </div>
+              <a href="{{url}}" title="{{title}}" class="nolink color-text">{{title}}</a>
+            </div>
+
+          </div> --}}
+          <div class="article-link" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;"
+            class="bg-white mb-4 p-3 box-episode box-post post-800 post type-post status-publish format-standard hentry category-writing tag-blog-post">
+            <a href="{{url}}" title="{{title}}" class="nolink color-text">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>{{title}}</h3>
+                  {{!-- <h4 class="normal h6">August 10, 2022</h4> --}}
+                  <div class="fs14 color-grey b ttu">
+                    {{!-- {{#if primary_tag}}
+                    {{#primary_tag}}
+                    <a href="{{url}}" title="{{name}}" class="nolink">{{name}}</a>
+                    {{/primary_tag}}
+                    &ensp;
+                    {{/if}} --}}
+                    {{!-- {{#foreach tags limit="2"}}
+                    <span class="mt1 mb1  fs14 b ttu color-grey">
+
+                      <a class="tag_name" href='{{ url }}'> {{name}}</a>
+
+                    </span>
+                    {{/foreach}} --}}
+                    {{> access-label icon_size=16}}
+                  </div>
+                  <p style="font-size: 15px;">{{{content words="10"}}}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          {{/foreach}}
+
+        </div>
+        {{/get}}
+
+
+      </div>
+      <div class="home__latest mt4">
+
+        <h2 class="fs32 mb1">{{t "Tags"}}</h2>
+
+        <hr class="line mb1">
+
+        <div style="display: flex; flex-wrap: wrap; gap: 10px 20px;">
+          {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+          {{#foreach tags}}
+          {{#if count.posts}}
+          <a class="tag_name color-grey" href='{{ url }}'>
+            <h4>{{ name }} <small>({{ count.posts }})</small></h4>
+          </a>
+          {{/if}}
+          {{/foreach}}
+          {{/get}}
+
+        </div>
+
+      </div>
+      
+      </div>
+    </div>
+  </div>
+
+
+
+  {{#contentFor "scripts"}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js"
+    integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"
+    integrity="sha512-/2sZKAsHDmHNoevKR/xsUKe+Bpf692q4tHNQs9VWWz0ujJ9JBM67iFYbIEdfDV9I2BaodgT5MIg/FTUmUv3oyQ=="
+    crossorigin="anonymous"></script>
+
+  <script>
+
+    /* FitVids */
+    $(document).ready(function () {
+      var $postContent = $(".home__hero");
+      $postContent.fitVids();
+    });
+
+  </script>
+  {{/contentFor}}

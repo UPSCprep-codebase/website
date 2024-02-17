@@ -1,0 +1,40 @@
+<div class="topic">
+  <h2 class="normal">📝 <a href="/upsc-basics/" style="text-decoration: none">UPSC Basics</a></h2>
+  {{#get "posts" filter="primary_tag:upsc-basics" limit="5"}}
+    {{#foreach posts}}
+      <a href="{{url}}" title="{{title}}" class="article-link color-text nolink">{{title}}</a>
+    {{/foreach}}
+  {{/get}}
+  <a href="/upsc-basics/" class="article-more-link fs14 ttu b color-text nolink">More articles on UPSC Basics &rarr;</a>
+</div>
+
+<div class="topic">
+  <h2 class="normal">🚀 <a href="/blog/" style="text-decoration: none">Blog Posts</a></h2>
+  {{#get "posts" filter="primary_tag:blog" limit="5"}}
+    {{#foreach posts}}
+      <a href="{{url}}" title="{{title}}" class="article-link color-text nolink">{{title}}</a>
+    {{/foreach}}
+  {{/get}}
+  <a href="/blog/" class="article-more-link fs14 ttu b color-text nolink">Ideas to boost your UPSC Prep &rarr;</a>
+</div>
+
+<div class="topic">
+  <h2 class="normal">✍️ <a href="/mains/" style="text-decoration: none">Mains</a></h2>
+  {{#get "posts" filter="primary_tag:mains" limit="5"}}
+    {{#foreach posts}}
+      <a href="{{url}}" title="{{title}}" class="article-link color-text nolink">{{title}}</a>
+    {{/foreach}}
+  {{/get}}
+  <a href="/mains/" class="article-more-link fs14 ttu b color-text nolink">More articles about Mains prep &rarr;</a>
+</div>
+
+<div class="topic">
+  <h2 class="normal">📚 <a href="/sociology/" style="text-decoration: none">Sociology Optional</a></h2>
+  {{#get "posts" filter="primary_tag:sociology" limit="5"}}
+    {{#foreach posts}}
+      <a href="{{url}}" title="{{title}}" class="article-link color-text nolink">{{title}}</a>
+    {{/foreach}}
+  {{/get}}
+  <a href="/sociology/" class="article-more-link fs14 ttu b color-text nolink">More articles on Sociology prep &rarr;</a>
+</div>
+

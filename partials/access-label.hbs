@@ -1,0 +1,16 @@
+{{^has visibility="public"}}
+  {{#if access}}
+  <span class="icon-unlock">{{>"icons/unlock" size=icon_size}}</span>
+  {{else}}
+  <span class="icon-lock">{{>"icons/lock" size=icon_size}}</span>
+  {{/if}}
+  {{#has visibility="paid"}}
+  {{t "Paid members"}}
+  {{/has}}
+  {{#has visibility="members"}}
+  {{t "Members"}}
+  {{/has}}
+  {{#has visibility="tiers"}}
+  {{#foreach tiers}}{{#if @index}}{{#if @last}} and {{else}}, {{/if}}{{/if}}{{name}}{{/foreach}} {{t "members"}}
+  {{/has}}
+{{/has}}

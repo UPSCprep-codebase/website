@@ -1,0 +1,44 @@
+<!-- UPSCprep by Rework Education -- upscprep.com -->
+
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+  {{statusCode}} Error &middot; UPSCprep
+  </title>
+
+  <link rel="stylesheet" href="{{asset 'styles.css'}}">
+
+</head>
+<body>
+
+  <div class="head">
+    <nav class="container tc">
+      {{> logo}}
+    </nav>
+  </div>
+
+  <main class="main-content tc mt4" style="padding: 3rem 0;">
+
+    <h1>{{statusCode}}</h1>
+    <p>{{message}}</p>
+    <p><a href="{{@site.url}}">{{t "Go to the front page →"}}</a></p>
+
+  </main>
+
+  <div class="footer fs14 tc">
+    <div class="container">
+        
+        <div class="mb1">&copy; {{@site.title}} {{date format="Y"}}</div>
+
+    </div>
+  </div>
+
+</body>
+</html>

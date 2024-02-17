@@ -1,0 +1,113 @@
+{
+    "name": "boss",
+    "description": "Ghost theme",
+    "version": "1.2.0",
+    "engines": {
+        "ghost": ">=4.0.0"
+    },
+    "author": {
+        "name": "Dan Rowden",
+        "email": "themes@danrowden.com",
+        "url": "https://superthemes.co"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "newsletters",
+        "members",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 20,
+        "custom": {
+            "background_color": {
+                "type": "color",
+                "default": "#F8FAFC"
+            },
+            "youtube_url": {
+                "type": "text",
+                "default": "https://www.youtube.com/c/abhijeetyupsc"
+            },
+            "instagram_url": {
+                "type": "text",
+                "default": "https://www.instagram.com/abhi.why"
+            },
+            "show_subscribe_form": {
+                "type": "boolean",
+                "default": true,
+                "group": "homepage"
+            },
+            "youtube_id": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "callout": {
+                "type": "text",
+                "group": "homepage",
+                "default": "Check out our courses"
+            },
+            "background_slant_height": {
+                "type": "text",
+                "default": "50",
+                "group": "homepage"
+            },
+            "post_image_size": {
+                "type": "select",
+                "options": [
+                    "Small",
+                    "Large"
+                ],
+                "default": "Small",
+                "group": "post"
+            },
+            "show_author": {
+                "type": "boolean",
+                "default": false,
+                "group": "post"
+            },
+            "show_footer_subscribe_form": {
+                "type": "boolean",
+                "default": true
+            },
+            "footer_subscribe_form_copy": {
+                "type": "text",
+                "default": "Actionable insights for improving your Prelims, Mains and Optional preparation, direct to your inbox."
+            },
+            "members_url": {
+                "type": "text",
+                "default": "/members/"
+            },
+
+            "open_external_links_in_new_tabs": {
+                "type": "boolean",
+                "default": true
+            },
+            "podcast_page_youtube_id": {
+                "type": "text"
+            }
+        },
+        "image_sizes": {
+            "xxs": {
+                "width": 30
+            },
+            "xs": {
+                "width": 100
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 600
+            },
+            "l": {
+                "width": 1000
+            },
+            "xl": {
+                "width": 2000
+            }
+        },
+        "card_assets": {
+            "exclude": ["bookmark", "gallery"]
+        }
+    }
+}

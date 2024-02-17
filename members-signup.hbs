@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{#if @member}}
+<script>
+window.location = '/'
+</script>
+{{/if}}
+
+<main class="main-content">
+
+  <div class="container mt4 tc">
+    <h1 class="lhtitle font-heading mt0 fs36">{{t "Sign up"}}</h1>
+  </div>
+
+  <div class="container container--narrow centered tc mt3 mb4">
+
+    {{> subscribe-form}}
+
+  </div>
+
+</main>

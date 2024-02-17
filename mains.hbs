@@ -1,0 +1,31 @@
+{{!< default}}
+
+<main class="main-content">
+
+  <div class="post-header tc">
+
+    <div class="container">
+
+      {{#tag}}
+
+      <h1 class="lhtitle font-heading mb1 mt0 fs36">Mains</h1>
+
+      {{#if description}}<p class="fs20 mb2">{{description}}</p>{{/if}}
+
+      <p class="fs18 color-grey">{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</p>
+
+      {{/tag}}
+      
+      <hr class="line line--center">
+
+    </div>
+
+  </div>
+
+  <div class="container post-content centered mt4">
+    {{#foreach posts limit="all"}}
+      {{> article-link}}
+    {{/foreach}}
+  </div>
+
+</div>

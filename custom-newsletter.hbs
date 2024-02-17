@@ -1,0 +1,85 @@
+{{!< default}}
+
+{{#contentFor "head_scripts"}}
+<style>
+  .main-content .logo-block { display: none; }
+</style>
+{{/contentFor}}
+
+<div class="post-header">
+{{#post}}
+
+  {{#if feature_image}}
+  <div class="container main-content">
+
+    <div class="home__hero mb2">
+
+      <div class="home__intro mt2">
+        <div class="logo-block">
+          {{> logo}}
+        </div>
+
+        <h1 class="lhtitle font-heading mb1 mt2 fs36">{{title}}</h1>
+
+        <div class="fs20">
+          {{content}}
+        </div>
+
+        <div class="mt2 mb3">
+          {{> subscribe-form-inline}}
+        </div>
+
+      </div>
+
+      <div class="home__video" style="padding-top:0">
+
+        <img src="{{img_url feature_image size="m"}}" alt="{{title}}" />
+
+      </div>
+
+    </div>
+
+  </div>
+
+        
+  {{else}}
+
+
+  <div class="mb2 container container--narrow main-content">
+    <div class="logo-block">
+      {{> logo}}
+    </div>
+
+    <h1 class="lhtitle font-heading mb1 mt2 fs36">{{title}}</h1>
+
+    <div class="fs20">
+      {{content}}
+    </div>
+
+    <div class="mt2">
+      {{> subscribe-form-inline}}
+    </div>
+  
+  </div>
+
+  {{/if}}
+{{/post}}
+</div>
+
+  <div class="container centered container--narrow">
+    <div class="post-content centered mt4">
+      <div class="mt4">
+
+        <h2 class="normal mt4 mb1">{{t "Read past issues"}}</h2>
+
+        {{#get "posts" filter="tag:newsletter" limit="all"}}
+          {{#foreach posts}}
+            {{> article-link}}
+          {{/foreach}}
+        {{/get}}
+
+      </div>
+    </div>
+  </div>
+
+</div>

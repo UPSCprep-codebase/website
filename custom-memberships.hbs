@@ -1,0 +1,86 @@
+{{!< default}}
+
+<main class="main-content">
+
+  {{#post}}
+  <div class="post-header tc">
+
+    <div class="container">
+
+      {{#if feature_image}}
+      <img src="{{img_url feature_image size="m"}}" alt="{{title}}" class="post-image" />
+      {{/if}}
+
+      <h1 class="lhtitle font-heading mb1 mt0 fs36">{{title}}</h1>
+
+      {{#if custom_excerpt}}
+      <h2 class="fs24 normal mb2">{{custom_excerpt}}</h2>
+      {{/if}}
+
+      <hr class="line line--center">
+
+    </div>
+
+  </div>
+
+  <div class="container post-content centered mt4">
+    {{content}}
+
+    {{#if @member.paid}}
+    <div class="tc mt3" style="border: 2px solid orange;padding: 1rem;">
+      <p class="mt0 mb0">
+        <b>{{t "Warning: You already have a paid subscription"}}</b><br>
+        <a href="/account/">{{t "Go to your account"}}</a>
+      </p>
+    </div>
+    {{/if}}
+  </div>
+  {{/post}}
+
+<div class="container plans mt3">
+
+    {{#get "tiers" include="monthly_price,yearly_price,benefits" limit="all" as |tiers|}}
+      {{#foreach tiers}}
+
+      <div class="plan">
+        <div>
+          <h2 class="mt0">{{name}}</h2>
+          <p class="fs18">{{description}}</p>
+
+          {{#if benefits}}
+          <ul class="plan-features color-grey">
+            {{#foreach benefits as |benefit|}}
+            <li>{{benefit}}</li>
+            {{/foreach}}
+          </ul>
+          {{/if}}
+        </div>
+
+        <div class="mt2">
+          {{^if monthly_price}}
+            {{^if yearly_price}}
+            <a href="/signup/" class="button button--wide">{{t "Sign up for free"}}</a>
+            {{/if}}
+          {{/if}}
+
+          <div class="button-flex">
+          {{#if monthly_price}}
+            <a href="" class="button" data-portal="signup/{{id}}/monthly" data-members-cancel="{{@custom.members_url}}">
+              <span class="button-content">{{price monthly_price currency=currency}}{{t "/month"}}</span><span class="button-loader">{{t "Please wait..."}}</span>
+            </a>
+          {{/if}}
+
+          {{#if yearly_price}}
+            <a href="" class="button" data-portal="signup/{{id}}/yearly" data-members-cancel="{{@custom.members_url}}">
+              <span class="button-content">{{price yearly_price currency=currency}}{{t "/year"}}</span><span class="button-loader">{{t "Please wait..."}}</span>
+            </a>
+          {{/if}}
+          </div>
+        </div>
+
+      </div>
+      {{/foreach}}
+    {{/get}}
+  </div>
+
+</main>

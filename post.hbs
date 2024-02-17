@@ -1,0 +1,188 @@
+{{!< default}}
+{{#contentFor "head_scripts"}}
+<style>
+  .home__hero { align-items: center; }
+</style>
+{{/contentFor}}
+{{#post}}
+
+<div class="main-content">
+
+  <article class="{{post_class}}">
+
+    <div class="post-header">
+
+      {{#has tag="podcast"}}
+        {{#if feature_image}}
+        <div class="container main-content">
+
+          <div class="home__hero mb2">
+
+            <div class="home__intro mt2">
+
+              <h1 class="lhtitle mb1 mt2 fs36">{{title}}</h1>
+
+              {{#if custom_excerpt}}
+              <div class="fs20">
+                {{custom_excerpt}}
+              </div>
+              {{/if}}
+
+            </div>
+
+            <div class="home__video" style="padding-top:0">
+
+              <img src="{{img_url feature_image size="m"}}" alt="{{title}}" />
+
+            </div>
+
+          </div>
+
+        </div>
+
+              
+        {{else}}
+
+
+        <div class="mb2 container container--narrow main-content">
+
+          <h1 class="lhtitle font-heading mb1 mt2 fs36">{{title}}</h1>
+
+          {{#if custom_excerpt}}
+          <div class="fs20">
+            {{custom_excerpt}}
+          </div>
+          {{/if}}
+        
+        </div>
+
+        {{/if}}
+
+      {{else}}
+
+      <div class="container container--narrow tc">
+        {{#if feature_image}}
+        <img src="{{img_url feature_image size="m"}}" alt="{{title}}" class="post-image {{#match @custom.post_image_size "Small"}}post-image--small{{/match}}" />
+        {{/if}}
+
+        <div class="ttu b mb1">
+        {{> access-label icon_size=18}}
+        </div>
+
+        <h1 class="lhtitle font-heading mb1 mt0 fs36">{{title}}</h1>
+
+        {{!-- {{#if primary_tag }}
+        {{#primary_tag }}
+          <div class="mt1 mb1 fs14 b ttu color-grey">
+            Tags:
+            <a href='{{ url }}'>{{name}}</a>
+            
+            </div>
+            
+        {{/primary_tag}}
+        
+        {{/if}} --}}
+        
+        
+        {{#if custom_excerpt}}
+        <h2 class="fs24 normal mb2">{{custom_excerpt}}</h2>
+        {{/if}}
+
+        <hr class="line line--center">
+      </div>
+
+    {{/has}}
+
+    </div>
+
+     {{#if tags }}
+
+        {{!-- {{#get 'tags'  }} --}}
+        <div class="post_tags">
+        <span class="post_tags_title">Tagged in:</span>
+        {{#foreach tags limit="4"}}
+        <span class="mt1 mb1  fs14 b ttu color-grey">
+            
+            <a class="tag_name" href='{{ url }}'> {{name}}</a>
+            
+            </span>
+    {{/foreach}}
+    </div>
+    {{!-- {{/get}} --}}
+        
+        {{/if}}
+
+    {{^has tag="#show-toc"}}
+
+    <div class="container container--narrow">
+      <div class="post-content centered mt4">
+            
+    {{else}}     
+
+    <div class="container container--narrow">
+      <div class="post-content centered mt4">
+      
+        <div class="table-of-contents">
+          <h4 class="ttu mt0">{{t "Table of contents"}}</h4>
+          <div class="toc"></div>
+
+        </div>
+    {{/has}}
+
+        <div class="mt4">
+          {{content}}
+	{{#prev_post in="primary_tag"}}
+		<b><a href="{{url}}">Previous Post</a></b>
+	{{/prev_post}}
+	{{#next_post in="primary_tag"}}
+		<p style="text-align:right;"><b><a href="{{url}}">Next Post</a></b></p>
+	{{/next_post}}
+
+        </div>
+
+      </div>
+    </div>
+
+  </article>
+  
+  {{comments title="Comments" count=false mode="light" saturation=80}}
+
+  {{#if access}}
+  <div class="container container--narrow">
+    <div class="post-content centered mt4">
+
+      {{#if @custom.show_author}}
+      <hr>
+      {{#foreach authors}}
+      <div class="author mt3">
+        {{#if profile_image}}
+        <div class="author__image">
+          <a href="{{url}}" title='{{t "More posts by {name}" name=name}}' class="nolink">
+            <img src="{{profile_image}}" class="avatar" alt="{{name}}" style="position:relative;top:-3px">
+          </a>
+        </div>
+        {{/if}}
+        <div class="author__bio">
+          <a href="{{url}}" title='{{t "More posts by {name}" name=name}}' class="nolink fs24 b">
+            {{name}}
+          </a>
+          <p class="mt0 color-grey">{{{bio}}}</p>
+        </div>
+      </div>
+      {{/foreach}}
+      {{/if}}
+
+
+
+    </div>
+  </div>
+
+</div>
+{{/if}}
+
+{{/post}}
+
+
+{{#contentFor "scripts"}}
+  {{> post-js}}
+{{/contentFor}}

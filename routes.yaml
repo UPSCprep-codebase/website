@@ -1,0 +1,196 @@
+routes:
+  /: 
+    controller: channel
+    template: home
+    data: page.home
+      # page.[home,courses]
+  /signup/: members-signup # Free sign up page
+  /signin/: members-signin # Member sign in
+  /account/: members-account # Member sign in
+  /mains/gs-1/history/:
+    controller: channel
+    permalink: /mains/gs-1/history/
+    template: tag
+    filter: tag:history
+    data: tag.history
+  /mains/gs-1/:
+    controller: channel
+    permalink: /mains/gs-1/
+    template: tag
+    filter: tag:gs-1
+    data: tag.gs-1
+  /mains/gs-1/history/modern-indian-history/:
+    controller: channel
+    permalink: /mains/gs-1/history/modern-indian-history/
+    template: tag
+    filter: tag:modern-indian-history
+    data: tag.modern-indian-history
+  /mains/gs-1/history/ancient-medieval/:
+    controller: channel
+    permalink: /mains/gs-1/history/ancient-medieval/
+    template: tag
+    filter: tag:ancient-medieval
+    data: tag.ancient-medieval
+
+collections:
+  /upsc-prelims/gs/history/:
+    permalink: /upsc-prelims/gs/history/{slug}/
+    filter: tag:[history]
+  /upsc-prelims/gs/geography/:
+    permalink: /upsc-prelims/gs/geography/{slug}/
+    filter: tag:[geography]
+  /upsc-prelims/gs/economy/:
+    permalink: /upsc-prelims/gs/economy/{slug}/
+    filter: tag:[economy]
+  /upsc-prelims/gs/polity/:
+    permalink: /upsc-prelims/gs/polity/{slug}/
+    filter: tag:[polity]
+  /upsc-prelims/gs/science-technology/:
+    permalink: /upsc-prelims/gs/science-technology/{slug}/
+    filter: tag:[science-technology]
+  /upsc-prelims/gs/environment/:
+    permalink: /upsc-prelims/gs/environment/{slug}/
+    filter: tag:[environment]
+  /upsc-prelims/csat/maths/:
+    permalink: /upsc-prelims/csat/maths/{slug}/
+    filter: tag:[maths]
+    
+  /upsc-prelims/csat/reasoning/:
+    permalink: /upsc-prelims/csat/reasoning/{slug}/
+    filter: tag:[reasoning]
+    
+  /upsc-prelims/csat/comprehension/:
+    permalink: /upsc-prelims/csat/comprehension/{slug}/
+    filter: tag:[comprehension]
+    
+  /upsc-mains/essay/:
+    permalink: /upsc-mains/essay/{slug}/
+    filter: tag:[essay]
+    
+  /upsc-mains/gs1/history/modern-indian-history/:
+    permalink: /upsc-mains/gs1/history/modern-indian-history/{slug}/
+    filter: tag:[modern-indian-history]
+  /upsc-mains/gs1/history/ancient-medieval-history/:
+    permalink: /upsc-mains/gs1/history/ancient-medieval-history/{slug}/
+    filter: tag:[ancient-medieval-history]
+  /upsc-mains/gs1/history/post-independence-history/:
+    permalink: /upsc-mains/gs1/history/post-independence-history/{slug}/
+    filter: tag:[post-independence-history]
+  /upsc-mains/gs1/history/world-history/:
+    permalink: /upsc-mains/gs1/history/world-history/{slug}/
+    filter: tag:[world-history]
+  /upsc-mains/gs1/art-culture/:
+    permalink: /upsc-mains/gs1/art-culture/{slug}/
+    filter: tag:[art-culture]
+  /upsc-mains/gs1/geography/indian-geography/:
+    permalink: /upsc-mains/gs1/geography/indian-geography/{slug}/
+    filter: tag:[indian-geography]
+  /upsc-mains/gs1/geography/world-geography/:
+    permalink: /upsc-mains/gs1/geography/world-geography/{slug}/
+    filter: tag:[world-geography]
+  /upsc-mains/gs1/geography/physical-geography/:
+    permalink: /upsc-mains/gs1/geography/physical-geography/{slug}/
+    filter: tag:[physical-geography]
+  /upsc-mains/gs1/geography/human-geography/:
+    permalink: /upsc-mains/gs1/geography/human-geography/{slug}/
+    filter: tag:[human-geography]
+  /upsc-mains/gs1/geography/indian-society/:
+    permalink: /upsc-mains/gs1/geography/indian-society/{slug}/
+    filter: tag:[indian-society]
+  /upsc-mains/gs2/indian-polity-governance/:
+    permalink: /upsc-mains/gs2/indian-polity-governance/{slug}/
+    filter: tag:[indian-polity-governance]
+  /upsc-mains/gs2/international-relations-ir/:
+    permalink: /upsc-mains/gs2/international-relations-ir/{slug}/
+    filter: tag:[international-relations-ir]
+  /upsc-mains/gs2/social-justice/health/:
+    permalink: /upsc-mains/gs2/social-justice/health/{slug}/
+    filter: tag:[health]
+  /upsc-mains/gs2/social-justice/education/:
+    permalink: /upsc-mains/gs2/social-justice/education/{slug}/
+    filter: tag:[education]
+  /upsc-mains/gs3/indian-economy-agriculture/:
+    permalink: /upsc-mains/gs3/indian-economy-agriculture/{slug}/
+    filter: tag:[indian-economy-agriculture]
+  /upsc-mains/gs3/environment-ecology/:
+    permalink: /upsc-mains/gs3/environment-ecology/{slug}/
+    filter: tag:[environment-ecology]
+  /upsc-mains/gs3/science-tech/:
+    permalink: /upsc-mains/gs3/science-tech/{slug}/
+    filter: tag:[science-tech]
+  /upsc-mains/gs3/disaster-management-dm/:
+    permalink: /upsc-mains/gs3/disaster-management-dm/{slug}/
+    filter: tag:[disaster-management-dm]
+  /upsc-mains/gs3/internal-security/:
+    permalink: /upsc-mains/gs3/internal-security/{slug}/
+    filter: tag:[internal-security]
+  /upsc-mains/gs4-ethics/gs4-ethics-theory/:
+    permalink: /upsc-mains/gs4-ethics/gs4-ethics-theory/{slug}/
+    filter: tag:[gs4-ethics-theory]
+  /upsc-mains/gs4-ethics/gs4-ethics-case-studies/:
+    permalink: /upsc-mains/gs4-ethics/gs4-ethics-case-studies/{slug}/
+    filter: tag:[gs4-ethics-case-studies]
+  /upsc-mains/optional/sociology/p1/:
+    permalink: /upsc-mains/optional/sociology/p1/{slug}/
+    filter: tag:[p1]
+  /upsc-mains/optional/sociology/p2/:
+    permalink: /upsc-mains/optional/sociology/p2/{slug}/
+    filter: tag:[p2]
+  /upsc-daily-answer-writing/:
+    permalink: /upsc-daily-answer-writing/{slug}/
+    filter: tag:[upsc-daily-answer-writing]
+  
+  
+  /upsc-personality-test-interview/:
+    permalink: /upsc-personality-test-interview/{slug}/
+    filter: tag:[upsc-personality-test-interview]
+  
+  /upsc-current-affairs/prelims/:
+    permalink: /upsc-current-affairs/prelims/{slug}/
+    filter: tag:[prelims]
+  /upsc-current-affairs/mains-gs1/:
+    permalink: /upsc-current-affairs/mains-gs1/{slug}/
+    filter: tag:[mains-gs1]
+  /upsc-current-affairs/mains-gs2/:
+    permalink: /upsc-current-affairs/mains-gs2/{slug}/
+    filter: tag:[mains-gs2]
+  /upsc-current-affairs/mains-gs3/:
+    permalink: /upsc-current-affairs/mains-gs3/{slug}/
+    filter: tag:[mains-gs3]
+  /upsc-current-affairs/mains-gs4-ethic/:
+    permalink: /upsc-current-affairs/mains-gs4-ethic/{slug}/
+    filter: tag:[mains-gs4-ethic]
+  /upsc-current-affairs/sociology/:
+    permalink: /upsc-current-affairs/sociology/{slug}/
+    filter: tag:[sociology]
+
+
+  /upsc-pyq/mains/:
+    permalink: /upsc-pyq/mains/{slug}/
+    filter: tag:[mains]
+  /upsc-pyq/prelims/:
+    permalink: /upsc-pyq/prelims/{slug}/
+    filter: tag:[prelims]
+  /upsc-basics/:
+    permalink: /upsc-basics/{slug}/
+    filter: tag:[upsc-basics]
+  /free-upsc-resources/:
+    permalink: /free-upsc-resources/{slug}/
+    filter: tag:[free-upsc-resources]
+  /upsc-syllabus/:
+    permalink: /upsc-syllabus/{slug}/
+    filter: tag:[upsc-syllabus]
+  /upsc-toppers-blogs-notes/:
+    permalink: /upsc-toppers-blogs-notes/{slug}/
+    filter: tag:[upsc-toppers-blogs-notes]
+  /upsc-ias-notes/:
+    permalink: /upsc-ias-notes/{slug}/
+    filter: tag:[upsc-ias-notes]
+
+  /:
+    permalink: /{slug}/
+    filter: tag:-[podcast,book]
+
+taxonomies:
+  tag: /{slug}/
+  author: /author/{slug}/
