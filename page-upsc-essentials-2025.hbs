@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    upsc essential course
+  </title>
+
+  <link rel="stylesheet" href="{{asset 'css/styles.css'}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.css" />
+
+  <script src="{{asset 'js/lite-yt-embed.js'}}"></script>
+  <link rel="stylesheet" href="{{asset 'css/lite-yt-embed.css'}}" />
+  <link rel="stylesheet" href="{{asset 'css/upsc-essential-2025.css'}}" />
+
+  {{{block "head_scripts"}}}
+
+  {{ghost_head}}
+
+</head>
+
+<body>
+  {{> site-nav}}
+  <div class=" tc upsc-essential-2025">
+    {{> upsc-essential-2025/essential-hero}}
+    <div class="container">
+      <div class="home__explore mt4">
+
+        <h2 class="fs32 mb1">{{t "Testimonials"}}</h2>
+
+        <hr class="line mb2">
+        <div class="home_explore">
+
+          {{> testimonial}}
+        </div>
+      </div>
+      {{> upsc-essential-2025/features}}
+      {{> upsc-essential-2025/features-table}}
+      {{> upsc-essential-2025/individual-course}}
+      {{> upsc-essential-2025/free-beginner-guide}}
+      {{> upsc-essential-2025/essential-faq}}
+    </div>
+    {{> upsc-essential-2025/essential-footer}}
+  </div>
+
+  <script>
+    document.querySelector('body').style.backgroundColor = '#FDFAF5';
+    document.querySelector('body').style.padding = 0;
+  </script>
+
+
+</body>
+
+</html>
