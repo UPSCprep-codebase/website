@@ -28,33 +28,19 @@
 <body>
   {{> site-nav}}
   <div class=" tc upsc-essential-2025">
-    {{> upsc-essential-2025/essential-hero}}
-    <div class="container">
-      <div class="home__explore mt4">
-
-        <h2 class="fs32 mb1">{{t "Testimonials"}}</h2>
-
-        <hr class="line mb2">
-        <div class="home_explore">
-
-          {{> testimonial}}
-        </div>
-      </div>
-      {{> upsc-essential-2025/features}}
-      {{> upsc-essential-2025/features-table}}
-      {{> upsc-essential-2025/individual-course}}
-      {{> upsc-essential-2025/free-beginner-guide}}
-      {{> upsc-essential-2025/essential-faq}}
-    </div>
-    {{> upsc-essential-2025/essential-footer}}
+    {{> upsc-essential-2025/hero}}
+    {{> upsc-essential-2025/testimonials/all-top-testimonials}}
+    {{> upsc-essential-2025/feature-table}}
+    {{> upsc-essential-2025/mentors}}
+    {{> upsc-essential-2025/free-guide/all-free-guides}}
+    {{> upsc-essential-2025/essential-faq}}
+    {{> upsc-essential-2025/testimonials/all-bottom-testimonials}}
   </div>
-
+  </div>
   <script>
-    document.querySelector('body').style.backgroundColor = '#FDFAF5';
+    document.querySelector('body').style.backgroundColor = 'var(--upsc-essential-2025-bg-light)';
     document.querySelector('body').style.padding = 0;
   </script>
-
-
 </body>
 
 </html>

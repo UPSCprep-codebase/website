@@ -1,0 +1,26 @@
+<div class="single-guide-wrapper">
+  <div class="svg-wrapper">
+    {{#if self-study}}
+    {{>"icons/upsc-essential-2025/free-guide/self-study"}}
+    {{else if beginners}}
+    {{>"icons/upsc-essential-2025/free-guide/beginners"}}
+    {{else if pyqs}}
+    {{>"icons/upsc-essential-2025/free-guide/pyqs"}}
+    {{else if daily-practice}}
+    {{>"icons/upsc-essential-2025/free-guide/daily-practice"}}
+    {{else if notes}}
+    {{>"icons/upsc-essential-2025/free-guide/notes"}}
+    {{else if syllabus}}
+    {{>"icons/upsc-essential-2025/free-guide/csat-syllabus"}}
+    {{/if}}
+  </div>
+  <h2>{{guide-heading}}</h2>
+  <div class="guide-info">
+    {{guide-info}}
+  </div>
+  <div class="guide-button-wrapper">
+    <a href={{button-link}}>
+      <button>{{button-label}}</button>
+    </a>
+  </div>
+</div>
