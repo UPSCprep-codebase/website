@@ -1,0 +1,153 @@
+.free-beginner-guide {
+  margin-top: 2rem;
+  background-color: var(--upsc-essential-2025-bg-blue);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding: 5rem 0.5rem;
+}
+#whatyouget{
+  color: #fe753e;
+}
+.guide-heading {
+  color: #fe753e;
+}
+.all-guides h2 {
+  color: #fe753e;
+}
+.guide-title {
+  color: #fe753e;
+}
+.get-course-button{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.free-beginner-guide div.container {
+  background-color: var(--upsc-essential-2025-bg-blue);
+}
+
+.free-beginner-guide .single-guide-wrapper h2 {
+  font-family: 'EB Garamond', 'Inter', sans-serif;
+}
+
+.free-beginner-guide .single-guide-wrapper .svg-wrapper {
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.free-beginner-guide .single-guide-wrapper .svg-wrapper svg {
+  height: inherit;
+  width: inherit;
+}
+
+.free-beginner-guide .all-guides {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    'a b'
+    'c d'
+    'e f';
+  gap: 1rem;
+  font-size: 14px;
+  margin-top: 2rem;
+}
+
+.free-beginner-guide .all-guides .single-guide-wrapper {
+  border: 4px solid #eeeeee;
+  border-radius: 20px;
+  padding: 1rem 1rem;
+  position: relative;
+  background-color: var(--upsc-essential-2025-bg-light);
+  height: 300px;
+}
+
+.free-beginner-guide .all-guides .single-guide-wrapper .guide-info {
+  margin-bottom: 0.5rem;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.free-beginner-guide .all-guides .single-guide-wrapper .guide-button-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  bottom: 5px;
+  width: 90%;
+}
+
+.free-beginner-guide
+  .all-guides
+  .single-guide-wrapper
+  .guide-button-wrapper
+  button {
+  padding: 0px 6px;
+  background-color: #d9d9d9;
+  color: #057dcd;
+  font-size: 15px;
+  text-decoration: underline;
+  bottom: 5px;
+  left: 25%;
+}
+.free-beginner-guide .single-guide:nth-child(1) {
+  grid-area: a;
+}
+.free-beginner-guide .single-guide:nth-child(2) {
+  grid-area: b;
+}
+
+.free-beginner-guide .single-guide:nth-child(3) {
+  grid-area: c;
+}
+
+.free-beginner-guide .single-guide:nth-child(4) {
+  grid-area: d;
+}
+
+.free-beginner-guide .single-guide:nth-child(5) {
+  grid-area: e;
+}
+
+.free-beginner-guide .single-guide:nth-child(6) {
+  grid-area: f;
+}
+
+@media (min-width: 700px) {
+  .free-beginner-guide .all-guides {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'a b c'
+      'd e f';
+    gap: 2rem;
+    font-size: 12px;
+    padding: 0 0.5rem;
+  }
+
+  .free-beginner-guide {
+    margin-top: 5rem;
+  }
+
+  .free-beginner-guide .all-guides .single-guide-wrapper {
+    height: 290px;
+  }
+
+  .free-beginner-guide h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .free-beginner-guide .all-guides {
+    gap: 4rem;
+    row-gap: 4rem;
+    padding: 0 4rem;
+    font-size: 14px;
+  }
+  .free-beginner-guide .all-guides .single-guide-wrapper {
+    height: 250px;
+  }
+}

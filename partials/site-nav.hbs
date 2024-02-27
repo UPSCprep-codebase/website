@@ -1,0 +1,100 @@
+<div class="head">
+  <nav class="container">
+    <div class="head__logo">
+      {{> logo}}
+    </div>
+	<div class="head__nav fssmall">
+		<a href="" data-ghost-search style="padding: 0.5rem 0.25rem;">
+	    	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.707 13.293 13 10.586A6.95 6.95 0 0 0 14 7c0-3.86-3.141-7-7-7S0 3.14 0 7s3.141 7 7 7a6.937 6.937 0 0 0 3.586-1l2.707 2.707a.997.997 0 0 0 1.414 0l1-1a.999.999 0 0 0 0-1.414zM7 12a5 5 0 1 1 .001-10.001A5 5 0 0 1 7 12z" fill="var(--color-default)"/></svg>
+		</a>
+	<div class="nav-wrapper ">
+		<span class="nav-trigger">
+		{{!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><g fill="var(--light-grey)"><path d="M8 14h7a1 1 0 000-2H8a1 1 0 000 2zM1 4h14a1 1 0 000-2H1a1 1 0 000 2zM1 9h14a1 1 0 000-2H1a1 1 0 000 2z"/></g></svg> --}}
+    <div class="menu-btn">
+			<div class="btn-line"></div>
+			<div class="btn-line"></div>
+			<div class="btn-line"></div>
+		</div>
+		</span>
+	{{navigation}}
+		</div>
+	</div>
+  </nav>
+</div>
+
+<script>
+
+let navItems = document.querySelectorAll('.nav li')
+var prevItem
+var subItems = [];
+for (var i = 0; i < navItems.length; i++) {
+  let item = navItems[i]
+  let label = item.children[0].innerHTML
+  if (label.indexOf('--') == 0) {
+    subItems.push({
+      link: item.innerHTML,
+      classes: item.classList
+    })
+  } else {
+    if (subItems.length > 0) {
+      // Append list to previous item
+      let subNavHTML = '<span class="nav-trigger">▼</span><ul class="nav">'
+      for (var j = 0; j < subItems.length; j++) {
+        subNavHTML += '<li class="' + subItems[j].classes + '">' + subItems[j].link.replace('-- ', '') + '</li>'
+        document.querySelector('.nav .' + subItems[j].classes[0]).remove() // delete original link
+      }
+      subNavHTML += '</ul>'
+      prevItem.innerHTML += subNavHTML
+      prevItem.classList.remove('nav-current')
+      prevItem.classList.add('subnav')
+      prevItem.classList.add('nav-wrapper')
+      prevItem.firstChild.addEventListener('click', function(e) {e.preventDefault()
+      })
+
+    }
+    // Reset
+    prevItem = item
+    subItems = []
+  }
+}
+</script>
+
+<script>
+ for (var i = 0, l = navItems.length;  i < l; i++) {
+   if(navItems[i].classList.contains('subnav')){
+      const navName = navItems[i].className.split(' ')[0];
+      const subMenu = document.querySelector(`.${navName}.subnav.nav-wrapper`);
+      navItems[i].addEventListener('click', function() {
+         subMenu.classList.toggle('show-menu');
+      });
+   }
+}
+</script>
+
+<script>
+	// select dom items
+	const menuBtn =
+		document.querySelector(".menu-btn");
+
+  const menu =
+		document.querySelector(".nav-wrapper");
+  
+	// Set the initial state of the menu
+	let showMenu = false;
+
+	menuBtn.addEventListener("click", toggleMenu);
+
+	function toggleMenu() {
+		if (!showMenu) {
+			menuBtn.classList.add("close");
+      menu.classList.add("show");
+			// Reset the menu state
+			showMenu = true;
+		} else {
+			menuBtn.classList.remove("close");
+      menu.classList.remove("show");
+			// Reset the menu state
+			showMenu = false;
+		}
+	}
+</script>

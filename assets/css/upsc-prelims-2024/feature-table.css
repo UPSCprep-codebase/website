@@ -1,0 +1,49 @@
+.essential__feature-table {
+  margin-top: 2rem;
+  background-color: var(--upsc-essential-2025-bg-blue);
+  padding: 4rem 0.5rem;
+}
+
+.essential__feature-table .desktop {
+  display: flex;
+  
+}
+
+.essential__feature-table div.container {
+  background-color: var(--upsc-essential-2025-bg-blue);
+}
+
+.essential__feature-table .feature-table-svg-wrapper {
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.essential__feature-table .feature-table-svg-wrapper svg {
+  width: inherit;
+  height: inherit;
+}
+.iframe-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px; /* Adjust the space between iframes */
+}
+
+.iframe {
+  flex: 0 0 auto; /* Prevent iframes from shrinking */
+}
+
+/* Optional: Ensure the .desktop container has enough width or is responsive */
+.desktop {
+  width: 100%; /* Adjust based on your layout */
+}
+
+
+
+@media (min-width: 700px) {
+  .essential__feature-table .desktop {
+    display: block;
+  }
+  .essential__feature-table .mobile {
+    display: none;
+  }
+}

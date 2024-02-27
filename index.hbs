@@ -1,0 +1,15 @@
+{{!< default}}
+
+<div class="container container--narrow main-content">
+
+  <div class="posts">
+    {{#foreach posts}}
+      {{> article-link}}
+    {{/foreach}}
+  </div>
+
+  <div class="mt3 fs16">
+  {{pagination}}
+  </div>
+  
+</div>

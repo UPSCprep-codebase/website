@@ -1,0 +1,29 @@
+.essential-course-faq {
+  text-align: left;
+  margin: 5rem 0rem;
+  padding: 0 1rem;
+  background-color: var(--upsc-essential-2025-bg-light);
+}
+
+.essential-course-faq h2.upsc-essential__section-heading {
+  margin-bottom: 2rem;
+}
+
+.essential-course-faq details {
+  border: 1px dotted #ad82cf;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  margin-bottom: 0.5rem;
+  margin: 3rem 0rem;
+}
+
+.essential-course-faq details summary:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .essential-course-faq h2.upsc-essential__section-heading {
+    margin-bottom: 1rem;
+  }
+}

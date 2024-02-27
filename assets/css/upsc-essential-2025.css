@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('upsc-essential-2025/common.css');
+@import url('upsc-essential-2025/hero.css');
+@import url('upsc-essential-2025/top-testimonial.css');
+@import url('upsc-essential-2025/feature-table.css');
+@import url('upsc-essential-2025/free-guide.css');
+@import url('upsc-essential-2025/faq.css');
+@import url('upsc-essential-2025/bottom-testimonial.css');
+@import url('upsc-essential-2025/mentors.css');
+
+:root {
+  --upsc-essential-2025-bg-light: #fbfbf3;
+  --upsc-essential-2025-bg-blue: #c8e2f4;
+}
+
+.upsc-essential-2025 {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background-color: var(--upsc-essential-2025-bg-light);
+  color: #000;
+}
+
+.upsc-essential-2025 .container {
+  background-color: var(--upsc-essential-2025-bg-light);
+}
+.upsc-essential-2025 a {
+  text-decoration: none;
+}
+
+h1.upsc-essential__section-heading {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+h2.upsc-essential__section-heading {
+  font-weight: 500;
+  font-size: 18px;
+  margin: auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.upsc-essential__section-heading-highlight {
+  background-color: #ffc93a;
+  margin: 0px 0px;
+  padding: 3px 5px;
+  font-weight: bold;
+}
+
+.upsc-essential-2025 button {
+  border-radius: 30px;
+  box-shadow: 0px 5px 4px var(--box-shadow);
+  background-color: #94c7e9;
+  border: none;
+}
+
+@media (min-width: 1000px) {
+  h1.upsc-essential__section-heading {
+    font-size: 36px;
+  }
+  h2.upsc-essential__section-heading {
+    font-weight: 500;
+    font-size: 30px;
+  }
+}

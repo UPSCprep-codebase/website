@@ -1,0 +1,75 @@
+
+{{#is "account, signin, signup"}}
+{{else}}
+<section class="newsletter-block">
+
+  {{#if @member}}
+    <div class="container container--narrow tc">
+      <p>{{t "You are logged in as"}} <b>{{@member.email}}</b></p>
+
+      <p><a href="/account/">{{t "Go to your account"}}</a></p>
+    </div>
+
+  {{else}}
+
+    {{#if @custom.show_footer_subscribe_form}}
+    <div class="container footer-cols">
+      <div class="footer-col">
+        <h2 class="mb1 fs28">&#128140; {{t "Subscribe to"}} {{@site.title}}</h2>
+        <p>{{{@custom.footer_subscribe_form_copy}}}</p>
+      </div>
+
+      <div class="footer-col">
+        {{> subscribe-form}}
+      </div>
+    </div>
+    {{/if}}
+
+  {{/if}}
+</section>
+{{/is}}
+
+
+<div class="footer fs14">
+  <div class="container footer-cols">
+    
+    <div class="footer-col">
+      <div class="mb1">&copy; {{@site.title}} {{date format="Y"}}.</div>
+      {{navigation type="secondary"}}
+    </div>
+    <div class="footer-col tr">
+      <ul class="social-list">
+        {{#if @site.twitter}}
+        <li>
+          <a href="https://twitter.com/{{@site.twitter}}" aria-label="Twitter" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M24 4.6c-.9.4-1.8.7-2.8.8 1-.6 1.8-1.6 2.2-2.7-1 .6-2 1-3.1 1.2-.9-1-2.2-1.6-3.6-1.6-2.7 0-4.9 2.2-4.9 4.9 0 .4 0 .8.1 1.1-4.2-.2-7.8-2.2-10.2-5.2-.5.8-.7 1.6-.7 2.5 0 1.7.9 3.2 2.2 4.1-.8 0-1.6-.2-2.2-.6v.1c0 2.4 1.7 4.4 3.9 4.8-.4.1-.8.2-1.3.2-.3 0-.6 0-.9-.1.6 2 2.4 3.4 4.6 3.4-1.7 1.3-3.8 2.1-6.1 2.1-.4 0-.8 0-1.2-.1 2.2 1.4 4.8 2.2 7.5 2.2 9.1 0 14-7.5 14-14v-.6c1-.7 1.8-1.6 2.5-2.5z"/></svg>
+          </a>
+        </li>
+        {{/if}}
+        {{#if @custom.youtube_url}}
+        <li>
+          <a href="{{@custom.youtube_url}}" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M23.8 7.2s-.2-1.7-1-2.4c-.9-1-1.9-1-2.4-1-3.4-.2-8.4-.2-8.4-.2s-5 0-8.4.2c-.5.1-1.5.1-2.4 1-.7.7-1 2.4-1 2.4S0 9.1 0 11.1v1.8c0 1.9.2 3.9.2 3.9s.2 1.7 1 2.4c.9 1 2.1.9 2.6 1 1.9.2 8.2.2 8.2.2s5 0 8.4-.3c.5-.1 1.5-.1 2.4-1 .7-.7 1-2.4 1-2.4s.2-1.9.2-3.9V11c0-1.9-.2-3.8-.2-3.8zM9.5 15.1V8.4l6.5 3.4-6.5 3.3z"/></svg>
+          </a>
+        </li>
+        {{/if}}
+        {{#if @site.facebook}}
+        <li>
+          <a href="https://facebook.com/{{@site.facebook}}" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M9.032 23L9 13H5V9h4V6.5C9 2.789 11.298 1 14.61 1c1.585 0 2.948.118 3.345.17v3.88H15.66c-1.8 0-2.15.856-2.15 2.112V9h5.241l-2 4h-3.24v10H9.032z"/></svg>
+          </a>
+        </li>
+        {{/if}}
+        {{#if @custom.instagram_url}}
+        <li>
+          <a href="{{@custom.instagram_url}}" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="#fff"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z"/><circle cx="18.406" cy="5.594" r="1.44"/></g></svg>
+          </a>
+        </li>
+        {{/if}}
+
+      </ul>
+    </div>
+
+  </div>
+</div>

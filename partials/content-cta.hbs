@@ -1,0 +1,25 @@
+<div style="min-height: 9rem;">
+{{{html}}}
+</div>
+<aside class="mt3 {{#if html}}gradient-pre{{/if}}">
+  <div class="content-cta tc">
+    {{#has visibility="paid"}}
+      <h2 class="fs24 ">{{t "This post is for paying subscribers only"}}</h2>
+      <div class="mb2 mt1">{{t "Sign up to a paid membership to get access to this and other premium posts."}}</div>
+    {{/has}}
+    {{#has visibility="members"}}
+      <h2 class="fs24 ">{{t "Create a free account"}}</h2>
+      <div class="mb2 mt1">{{t "Get instant access to this and other exclusive content."}}</div>
+    {{/has}}
+    {{#has visibility="tiers"}}
+      <h2 class="fs24 ">{{t "This post is for subscribers on the"}} {{products}}</h2>
+      <div class="mb2 mt1">{{t "Sign up to instantly get access to this and other member-only posts."}}</div>
+    {{/has}}
+    {{#if @member}}
+      <div class="mb2"><a class="button mt1 fs20" data-portal="account/plans">{{t "Upgrade for instant access"}}</a></div>
+    {{else}}
+      {{> subscribe-form}}
+      <p class="fs16 color-grey mt1">{{t "Already have an account?"}} <a href="/signin/">{{t "Sign in"}}</a></p>
+    {{/if}}
+  </div>
+</aside>

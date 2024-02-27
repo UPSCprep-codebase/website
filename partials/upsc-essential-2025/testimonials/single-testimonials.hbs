@@ -1,0 +1,19 @@
+<div class="testimonial-box">
+  <div class="testimonial">
+    <div class="img-section">
+      {{#if src}}
+      <img src={{src}} alt="Testimonial 1" class="testimonial-image">
+      {{/if}}
+      {{#if youtube-link}}
+      <a class="watch-video-btn" href={{youtube-link}}>
+        <button>Watch Video</button>
+      </a>
+      {{/if}}
+    </div>
+    <div class="testimonial-text">
+      <h2 class="testimonial-name">{{name}}</h2>
+      <h4 class="testimonial-rank">{{rank}}</h4>
+      <p class="testimonial-review-text">{{review}}</p>
+    </div>
+  </div>
+</div>

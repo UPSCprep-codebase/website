@@ -1,0 +1,14 @@
+{{^if @member}}
+<form data-members-form="subscribe" style="max-width: 480px">
+  <div class="form-body">
+    <div class="form-flex">
+      <input data-members-email type="email" required="true" placeholder="{{t 'Email address'}}">
+      <button type="submit"><span class="button-content">{{t "Subscribe"}}</span><span class="button-loader">{{t "Submitting..."}}</span></button>
+    </div>
+    <p data-members-error style="color: red" class="mt0"></p>
+  </div>
+  <div class="success-message">
+    <p class="mt0 mb0"><b>{{t "Thank you for joining!"}}</b><br>{{t "Please check your inbox for a link to confirm your email address."}}</p>
+  </div>
+</form>
+{{/if}}

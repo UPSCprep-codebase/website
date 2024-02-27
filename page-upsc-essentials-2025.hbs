@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    upsc essential course
+  </title>
+
+  <link rel="stylesheet" href="{{asset 'css/styles.css'}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.css" />
+
+  <script src="{{asset 'js/lite-yt-embed.js'}}"></script>
+  <link rel="stylesheet" href="{{asset 'css/lite-yt-embed.css'}}" />
+  <link rel="stylesheet" href="{{asset 'css/upsc-essential-2025.css'}}" />
+
+  {{{block "head_scripts"}}}
+
+  {{ghost_head}}
+
+</head>
+
+<body>
+  {{> site-nav}}
+  <div class=" tc upsc-essential-2025">
+    {{> upsc-essential-2025/hero}}
+    {{> upsc-essential-2025/testimonials/all-top-testimonials}}
+    {{> upsc-essential-2025/feature-table}}
+    {{> upsc-essential-2025/mentors}}
+    {{> upsc-essential-2025/free-guide/all-free-guides}}
+    {{> upsc-essential-2025/essential-faq}}
+    {{> upsc-essential-2025/testimonials/all-bottom-testimonials}}
+  </div>
+  </div>
+  <script>
+    document.querySelector('body').style.backgroundColor = 'var(--upsc-essential-2025-bg-light)';
+    document.querySelector('body').style.padding = 0;
+  </script>
+</body>
+
+</html>

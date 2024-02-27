@@ -1,0 +1,32 @@
+.essential__feature-table {
+  margin-top: 2rem;
+  background-color: var(--upsc-essential-2025-bg-blue);
+  padding: 4rem 0.5rem;
+}
+
+.essential__feature-table .desktop {
+  display: none;
+}
+
+.essential__feature-table div.container {
+  background-color: var(--upsc-essential-2025-bg-blue);
+}
+
+.essential__feature-table .feature-table-svg-wrapper {
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.essential__feature-table .feature-table-svg-wrapper svg {
+  width: inherit;
+  height: inherit;
+}
+
+@media (min-width: 700px) {
+  .essential__feature-table .desktop {
+    display: block;
+  }
+  .essential__feature-table .mobile {
+    display: none;
+  }
+}

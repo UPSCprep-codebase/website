@@ -1,0 +1,30 @@
+button.essential__common-btn#get_it_now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+  padding: 0 10px;
+  border-radius: 15px;
+  background-color: #ffc93a;
+  margin: 0 auto;
+}
+
+button.essential__common-btn .btn-icon {
+  display: inline-block;
+  width: 23px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+button.essential__common-btn .btn-icon svg {
+  width: inherit;
+  height: fit-content;
+}
+
+@media (min-width: 700px) {
+  button.essential__common-btn#get_it_now {
+    margin: 0;
+  }
+}
