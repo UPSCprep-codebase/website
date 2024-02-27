@@ -1577,3 +1577,10 @@ a.kg-bookmark-container:hover {
   padding: 3px 15px;
   border-radius: 20px;
 }
+#joinnowbutton{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 5%;
+}

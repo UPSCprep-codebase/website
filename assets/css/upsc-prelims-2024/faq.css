@@ -21,7 +21,13 @@
 .essential-course-faq details summary:hover {
   cursor: pointer;
 }
-
+#joinnowbutton{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 5%;
+}
 @media (min-width: 700px) {
   .essential-course-faq h2.upsc-essential__section-heading {
     margin-bottom: 1rem;
