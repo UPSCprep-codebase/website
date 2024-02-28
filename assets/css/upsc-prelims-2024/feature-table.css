@@ -37,7 +37,16 @@
   width: 100%; /* Adjust based on your layout */
 }
 
+<<<<<<< HEAD
 
+=======
+#democlass{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+>>>>>>> e194a6b (latest code)
 
 @media (min-width: 700px) {
   .essential__feature-table .desktop {

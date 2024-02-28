@@ -46,6 +46,15 @@ h2.upsc-essential__section-heading {
   padding: 3px 5px;
   font-weight: bold;
 }
+<<<<<<< HEAD
+=======
+.upsc-essential__section-heading_1 {
+
+  margin: 0px 0px;
+  padding: 3px 5px;
+  font-weight: bold;
+}
+>>>>>>> e194a6b (latest code)
 
 .upsc-essential-2025 button {
   border-radius: 30px;
