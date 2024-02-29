@@ -4,6 +4,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding: 5rem 0.5rem;
+  min-height: 100vh;
 }
 
 .free-beginner-guide div.container {
@@ -99,6 +100,9 @@
 }
 
 @media (min-width: 700px) {
+  .free-beginner-guide {
+    min-height: unset;
+  }
   .free-beginner-guide .all-guides {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:

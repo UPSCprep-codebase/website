@@ -2,6 +2,7 @@
   margin-top: 2rem;
   background-color: var(--upsc-essential-2025-bg-blue);
   padding: 4rem 0.5rem;
+  min-height: 100vh;
 }
 
 .essential__feature-table .desktop {
@@ -23,6 +24,9 @@
 }
 
 @media (min-width: 700px) {
+  .essential__feature-table {
+    min-height: unset;
+  }
   .essential__feature-table .desktop {
     display: block;
   }

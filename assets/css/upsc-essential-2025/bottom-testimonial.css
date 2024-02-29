@@ -3,6 +3,7 @@
   padding: 5rem 0rem;
   padding-bottom: 3rem;
   background-color: var(--upsc-essential-2025-bg-blue);
+  min-height: 400vh;
 }
 
 .essential__bottom-testimonial .essential__top-testimonial {
@@ -35,6 +36,9 @@
 }
 
 @media (min-width: 700px) {
+  .essential__bottom-testimonial {
+    min-height: unset;
+  }
   .essential__bottom-testimonial
     .essential__top-testimonial
     .essential__top-testimonial-reviews-container {

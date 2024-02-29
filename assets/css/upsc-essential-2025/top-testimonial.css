@@ -2,6 +2,7 @@
   background-color: var(--upsc-essential-2025-bg-light);
   margin-top: 4rem;
   margin-bottom: 5rem;
+  min-height: 150vh;
 }
 
 .essential__top-testimonial .upsc-essential__section-heading {
@@ -26,6 +27,9 @@
 }
 
 @media (min-width: 700px) {
+  .essential__top-testimonial {
+    min-height: unset;
+  }
   .essential__top-testimonial-reviews-container {
     flex-direction: row;
     margin-top: 4rem;

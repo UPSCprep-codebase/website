@@ -1,6 +1,7 @@
 .essential__mentors {
   margin: 5rem 0;
   background-color: var(--upsc-essential-2025-bg-light);
+  min-height: 150vh;
 }
 
 .essential__mentors .upsc-essential__section-heading {
@@ -67,6 +68,9 @@
 }
 
 @media (min-width: 700px) {
+  .essential__mentors {
+    min-height: unset;
+  }
   .essential__mentors .mentor-single-row .single-mentor-container {
     flex-direction: row;
   }

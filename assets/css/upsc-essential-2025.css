@@ -1,13 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap'); */
-@import url('upsc-essential-2025/common.css');
-@import url('upsc-essential-2025/hero.css');
-@import url('upsc-essential-2025/top-testimonial.css');
-@import url('upsc-essential-2025/feature-table.css');
-@import url('upsc-essential-2025/free-guide.css');
-@import url('upsc-essential-2025/faq.css');
-@import url('upsc-essential-2025/bottom-testimonial.css');
-@import url('upsc-essential-2025/mentors.css');
 
 :root {
   --upsc-essential-2025-bg-light: #fbfbf3;
@@ -15,6 +7,7 @@
 }
 
 .upsc-essential-2025 {
+  min-height: 1000vh;
   font-family: 'Poppins', 'Inter', sans-serif;
   background-color: var(--upsc-essential-2025-bg-light);
   color: #000;
@@ -54,6 +47,12 @@ h2.upsc-essential__section-heading {
   border: none;
 }
 
+@media (min-width: 700px) {
+  .upsc-essential-2025 {
+    min-height: unset;
+  }
+}
+
 @media (min-width: 1000px) {
   h1.upsc-essential__section-heading {
     font-size: 36px;
@@ -61,5 +60,259 @@ h2.upsc-essential__section-heading {
   h2.upsc-essential__section-heading {
     font-weight: 500;
     font-size: 30px;
+  }
+}
+
+/* -------------- Common -------------- */
+button.essential__common-btn#get_it_now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+  padding: 0 10px;
+  border-radius: 15px;
+  background-color: #ffc93a;
+  margin: 0 auto;
+}
+
+button.essential__common-btn .btn-icon {
+  display: inline-block;
+  width: 23px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+button.essential__common-btn .btn-icon svg {
+  width: inherit;
+  height: fit-content;
+}
+
+@media (min-width: 700px) {
+  button.essential__common-btn#get_it_now {
+    margin: 0;
+  }
+}
+
+/* ---------------- Hero -------------- */
+.essential__hero .essential__banner {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 90vh;
+}
+
+.essential__hero .essential__banner .home__intro {
+  padding: 0px 10px;
+  width: 100%;
+}
+
+.essential__hero .essential__banner .home__intro .discount-text {
+  color: rgba(0, 0, 0, 45%);
+  font-size: 12px;
+}
+
+.essential__hero .essential__banner .home__intro .get-course-button {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem auto;
+  gap: 5px;
+}
+
+.essential__hero .essential__banner .home__intro button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0px;
+  padding-left: 5px;
+  padding-right: 10px;
+  border-radius: 15px;
+}
+
+.essential__hero .essential__banner .home__intro button .btn-icon {
+  display: inline-block;
+  width: 23px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.essential__hero .essential__banner ul li {
+  font-size: 16px;
+  margin-left: 3%;
+}
+
+.essential__hero .banner-images {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.essential__hero .banner-images span.abhijeet {
+  width: 163px;
+  margin-left: -27%;
+  display: inline-block;
+  z-index: 103;
+  position: relative;
+}
+
+.essential__hero .banner-images span.shashank {
+  width: 200px;
+  display: inline-block;
+  position: absolute;
+  left: 35%;
+}
+
+.essential__hero .banner-images span span.hero-image-caption {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+}
+
+.essential__hero .banner-images span.shashank span.hero-image-caption {
+  padding-left: 30%;
+}
+
+.essential__hero svg {
+  width: inherit;
+  height: fit-content;
+}
+
+.essential__hero .essential__stats {
+  background-color: #057dcd;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.essential__hero .essential__stats .stats-box-container {
+  display: flex;
+  font-size: 10px;
+  justify-content: space-evenly;
+  color: white;
+  align-items: flex-start;
+  font-weight: 500;
+  flex-direction: row;
+  max-width: 1040px;
+  margin: auto;
+  width: 100%;
+  padding: 3% 0;
+}
+
+.essential__hero .essential__stats .stats-box-container > div {
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+}
+
+.essential__hero .essential__stats .stat-value {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.essential__hero {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.essential__hero .home__intro h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.essential__hero .home__intro p {
+  font-size: 18px;
+  margin: 25px 0;
+}
+
+@media (min-width: 700px) {
+  .essential__hero .essential__banner {
+    min-height: unset;
+  }
+
+  .essential__hero .essential__stats {
+    margin-top: 0;
+  }
+  .essential__hero .essential__banner {
+    flex-direction: row;
+    padding-top: 5rem;
+  }
+  .essential__hero .banner-images span.abhijeet {
+    width: 158px;
+  }
+  .essential__hero .banner-images span.shashank {
+    width: 195px;
+  }
+  .essential__hero .essential__banner .home__intro .get-course-button {
+    margin: 3rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .essential__hero .essential__stats {
+    background-color: #057dcd;
+  }
+  .essential__hero .essential__stats .stat-value {
+    font-size: 36px;
+    font-weight: 500;
+  }
+  .essential__hero .banner-images {
+    position: relative;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .essential__hero .essential__banner {
+    padding-top: 0rem;
+  }
+  .essential__hero .banner-images span.abhijeet {
+    width: 195px;
+  }
+  .essential__hero .banner-images span.shashank {
+    width: 240px;
+  }
+  .essential__hero .banner-images span span.hero-image-caption {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .essential__hero .essential__stats .stats-box {
+    font-size: 16px;
+  }
+  .essential__hero .essential__stats .stat-value {
+    font-size: 36px;
+  }
+  .essential__hero .banner-images {
+    width: 70%;
+  }
+  .essential__hero .essential__banner p {
+    font-size: 20px;
+  }
+
+  .essential__hero .essential__banner ul li {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .essential__hero .essential__stats .stat-value {
+    font-size: 40px;
   }
 }
