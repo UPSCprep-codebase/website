@@ -52,13 +52,16 @@
 }
 
 .essential__hero .banner-images {
+  width: 100%;
+}
+
+.essential__hero .banner-images div {
   position: relative;
   display: flex;
-  width: 100%;
   justify-content: center;
 }
 
-.essential__hero .banner-images span.abhijeet {
+.essential__hero .banner-images div span.abhijeet {
   width: 163px;
   margin-left: -27%;
   display: inline-block;
@@ -66,14 +69,14 @@
   position: relative;
 }
 
-.essential__hero .banner-images span.shashank {
+.essential__hero .banner-images div span.shashank {
   width: 200px;
   display: inline-block;
   position: absolute;
   left: 35%;
 }
 
-.essential__hero .banner-images span span.hero-image-caption {
+.essential__hero .banner-images div span span.hero-image-caption {
   font-size: 10px;
   font-weight: 500;
   line-height: 14px;
@@ -83,8 +86,8 @@
   font-weight: 500;
 }
 
-.essential__hero .banner-images span.shashank span.hero-image-caption {
-  padding-left: 30%;
+.essential__hero .banner-images div span.shashank span.hero-image-caption {
+  padding-left: 20%;
 }
 
 .essential__hero svg {
@@ -150,14 +153,17 @@
     flex-direction: row;
     padding-top: 5rem;
   }
-  .essential__hero .banner-images span.abhijeet {
+  .essential__hero .banner-images div span.abhijeet {
     width: 158px;
   }
-  .essential__hero .banner-images span.shashank {
+  .essential__hero .banner-images div span.shashank {
     width: 195px;
   }
   .essential__hero .essential__banner .home__intro .get-course-button {
     margin: 3rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
   .essential__hero .essential__stats {
     background-color: #057dcd;
@@ -167,9 +173,11 @@
     font-weight: 500;
   }
   .essential__hero .banner-images {
+    width: 60%;
+  }
+  .essential__hero .banner-images div {
     position: relative;
     display: flex;
-    width: 60%;
     justify-content: center;
   }
 }
@@ -178,13 +186,13 @@
   .essential__hero .essential__banner {
     padding-top: 0rem;
   }
-  .essential__hero .banner-images span.abhijeet {
+  .essential__hero .banner-images div span.abhijeet {
     width: 195px;
   }
-  .essential__hero .banner-images span.shashank {
+  .essential__hero .banner-images div span.shashank {
     width: 240px;
   }
-  .essential__hero .banner-images span span.hero-image-caption {
+  .essential__hero .banner-images div span span.hero-image-caption {
     font-size: 14px;
     line-height: 16px;
   }

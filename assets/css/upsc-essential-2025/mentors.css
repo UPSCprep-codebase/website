@@ -57,6 +57,15 @@
   height: inherit;
 }
 
+.essential__mentors
+  .mentor-single-row
+  .single-mentor-container
+  .image-container-png {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
 @media (min-width: 700px) {
   .essential__mentors .mentor-single-row .single-mentor-container {
     flex-direction: row;
